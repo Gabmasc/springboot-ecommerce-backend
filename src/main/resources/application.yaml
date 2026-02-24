@@ -1,3 +1,16 @@
 spring:
   application:
     name: ecommerce
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecommerce
+    username: ecommerce_only_DB
+    password: strong_password
+    driver-class-name: org.postgres.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+  flyway:
+    enabled: true
